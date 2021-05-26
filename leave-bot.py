@@ -4,22 +4,6 @@ from discord.ext.commands import Context
 
 client = commands.Bot(command_prefix="!")
 
-
-@client.command()
-async def hello(ctx):
-    channel = ctx.channel
-    await channel.send("Yo")
-    print("ayo")
-
-
-@client.command()
-async def homework(ctx, arg=None):
-    if arg == "yes":
-        await ctx.channel.send("Yes indeed")
-    else:
-        print("yeaaaa")
-
-
 @client.event
 async def on_message(message):
     if message.content == "hello":
